@@ -1,0 +1,25 @@
+<div class="container">
+  <table>
+    <thead>
+      <th>cpf</th>
+      <th>nome</th>
+      <th>nome da mãe</th>
+      <th>data de nascimento</th>
+      <th>gênero</th>
+      <th>Ações</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users | async">
+        <td>{{user.cpf}}</td>
+        <td>{{user.userName}}</td>
+        <td>{{user.mothersName}}</td>
+        <td>{{user.birth}}</td>
+        <td>{{user.gender}}</td>
+        <td>
+          <button (click)="editModal(user, user.key)" class="edit" title="editar"><i class="material-icons">edit</i></button>
+          <button (click)="delete(user.key)" class="delete" title="deletar"><i class="material-icons">delete</i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  justify-content: flex-end;
+
+  background-color: var(--main-black);
+  color: var(--white);
+}
+
+.footer > span {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.footer a {
+  font-weight: 500;
+  text-decoration: none;
+
+  color: #c77e90;
+}
+
+.red {
+  color: rgb(227, 94, 107);
+}
+
+.v-middle {
+  vertical-align: middle;
+}

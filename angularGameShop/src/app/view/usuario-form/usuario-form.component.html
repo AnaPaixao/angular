@@ -1,0 +1,60 @@
+<section class="container">
+  <form action="" class="row" #fc="ngForm" (ngSubmit)="onSubmit(fc)">
+    <!-- 1. Criar o atributo #fc="ngForm"-->
+    <!-- 9. Criar o método ngSubmit e passar uma função com parametro fc -->
+    <div class="col-12 col-md-6">
+      <div class="form-group">
+        <label for="">Nome* <span class="text-danger"
+            *ngIf="nome.invalid && (nome.dirty || nome.touched)">Obrigatório</span></label>
+        <!-- 4. fazer a validação com ngIf -->
+        <input type="text" name="nome" [(ngModel)]="usuario.nome" class="form-control" #nome="ngModel" required>
+        <!-- 3. Criar uma variável local #nome (do formulario) -->
+      </div>
+
+      <div class="form-group">
+        <label for="">E-mail* <span class="text-danger"
+            *ngIf="email.invalid && (email.dirty || nome.touched)">Obrigatório</span></label>
+        <input type="email" name="email" [(ngModel)]="usuario.email" class="form-control" #email="ngModel" required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <!-- 10. Expressão regular para validar o email -->
+      </div>
+
+      <div class="form-group">
+        <label for="">Telefone</label>
+        <input type="tel" name="tel" [(ngModel)]="usuario.tel" class="form-control" [brmasker]="{phone: true}">
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <div class="form-group">
+        <label for="">Senha*</label>
+        <input type="password" name="pws" [(ngModel)]="usuario.pws" class="form-control" minlength="6" #senha="ngModel"
+          required> <!-- 5. definir tamanho min senha -->
+        <span class="text-danger" *ngIf="senha.invalid && (senha.dirty || senha.touched)">Senha inválida</span>
+        <!-- 6. validação de senha diferente -->
+      </div>
+
+      <div class="form-group">
+        <label for="">Confirmação da senha*</label>
+        <input type="password" name="nome" [(ngModel)]="conf" class="form-control" #confSenha="ngModel" required>
+        <span class="text-danger" *ngIf="senha.value != confSenha.value && (senha.dirty && confSenha.dirty)">Senhas
+          diferentes</span> <!-- 7. valida se as senhas coincidem-->
+      </div>
+
+      <!-- <div class="custom-file">
+        <input type="file" class="custom-file-input" id="customFile">
+        <label class="custom-file-label" for="customFile">Escolha uma Foto</label>
+      </div> -->
+
+      <div class="form-group text-right py-2">
+        <button type="submit" class="btn btn-primary" [disabled]="fc.invalid || senha.value != confSenha.value"> Salvar
+        </button>
+        <!-- 2. Desabilitar o botão salvar -->
+        <!-- 8. Validar a senha também no botão, pois a variável conf não faz parte de usuário -->
+        <button type="reset" class="btn btn-danger ml-1"> Cancelar </button>
+      </div>
+    </div>
+  </form>
+
+  <!-- <app-endereco-form></app-endereco-form> -->
+</section>

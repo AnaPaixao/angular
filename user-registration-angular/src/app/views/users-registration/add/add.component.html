@@ -1,0 +1,69 @@
+<div class="container">
+  <h1>Cadastre um usuário</h1>
+
+  <mat-divider></mat-divider>
+
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <mat-form-field color="primary" appearance="fill">
+      <mat-label>CPF</mat-label>
+      <input matInput name="cpf" formControlName="cpf" minlength="11" placeholder="999.999.999-99">
+      <ng-container *ngIf="userForm.controls.cpf.touched">
+        <span *ngIf="userForm.controls.cpf.errors?.required">
+          Campo obrigatório
+        </span>
+        <span *ngIf="userForm.controls.cpf.errors?.minlength">
+          Onze dígitos 
+        </span>
+      </ng-container>
+    </mat-form-field>
+    
+
+    <mat-form-field color="primary" appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput name="userName" formControlName="userName" minlength="3">
+      <ng-container *ngIf="userForm.controls.userName.touched">
+        <span *ngIf="userForm.controls.userName.errors?.required">
+          Campo obrigatório
+        </span>
+        <span *ngIf="userForm.controls.userName.errors?.minlength">
+          Mínino 3 letras 
+        </span>
+      </ng-container>
+    </mat-form-field>
+
+    <mat-form-field color="primary" appearance="fill">
+      <mat-label>Nome da Mãe</mat-label>
+      <input matInput name="mothersName" formControlName="mothersName">
+      <ng-container *ngIf="userForm.controls.mothersName.touched">
+        <span *ngIf="userForm.controls.mothersName.errors?.minlength">
+          Mínino 3 letras 
+        </span>
+      </ng-container>
+    </mat-form-field>
+
+    <mat-form-field color="primary" appearance="fill">
+      <mat-label>Data de Nascimento</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="birth">
+      <mat-datepicker-toggle matSuffix [for]="picker">
+        <mat-icon matDatepickerToggleIcon>cake</mat-icon>
+      </mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <ng-container *ngIf="userForm.controls.birth.touched">
+        <span *ngIf="userForm.controls.birth.errors?.required">
+          Campo obrigatório
+        </span>
+      </ng-container>
+    </mat-form-field>
+
+    <div class="radio-group-container">
+      <label id="radio-group-label">Gênero:</label>
+      <mat-radio-group color="primary" formControlName="gender" aria-labelledby="radio-group-label">
+        <mat-radio-button value="feminino">Feminino</mat-radio-button>
+        <mat-radio-button value="masculino">Masculino</mat-radio-button>
+        <mat-radio-button value="outros">Outros</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <button mat-raised-button class="btn" [disabled]="!userForm.valid">Cadastrar</button>
+  </form>
+</div>

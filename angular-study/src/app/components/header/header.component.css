@@ -1,0 +1,76 @@
+.header {
+  display: flex;
+  align-items: center;
+
+  background-color: #212121;
+  color: white;
+  font-size: 18px;
+}
+
+.header button {
+  margin-right: 10px;
+
+  border: none;
+}
+
+.header, a {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+}
+
+mat-sidenav-container {
+  min-height: calc(100vh - 130px);
+  overflow: hidden;
+}
+
+mat-divider {
+  background-color: rgba(196, 196, 196, 0.384);
+  margin: 10px 0;
+}
+
+.sidenav {
+  width: 250px;
+
+  margin: 15px;
+  padding: 16px;
+
+  border-radius: 10px;
+
+  background-color: #000000;
+  color: white;
+
+}
+
+.sidenav a {
+  color: #fff;
+
+  font-size: 14px;
+}
+
+.sidenav a:hover {
+  background-color: rgba(255, 255, 255, 0.205);
+  border-radius: 5px;
+}
+
+.sidenav a span {
+  margin-right: 8px;
+}
+
+.sidenav a i {
+  margin-right: 8px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  
+  width: 97%;
+  min-height: calc(100vh - 180px);
+
+  margin: 15px 30px;
+  padding-top: 20px;
+
+  border-radius: 10px;
+}

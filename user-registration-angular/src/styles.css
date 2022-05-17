@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
+
+:root {
+  --main-black: #212121;
+  --white: #ffffff;
+}
+
+html, body { 
+  height: 100%; 
+
+  padding: 0;
+  margin: 0;
+
+  font-size: 62.5%;
+  
+  box-sizing: border-box;
+}
+
+body { 
+  font-family: "Roboto Mono", "Helvetica Neue", sans-serif; 
+}
+
+a {
+  text-decoration: none;
+}
+
+.snackbar {
+  border-bottom: 5px solid rgba(0, 255, 0, 0.418);
+  color: #fff;
+}
+
+.snackbar-delete {
+  border-bottom: 5px solid rgba(255, 6, 6, 0.562);
+  color: #fff;
+}
+

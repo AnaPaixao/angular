@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "user-registration-a12e0": {
+      "hosting": {
+        "user-registration-test": [
+          "user-registration-a12e0"
+        ]
+      }
+    }
+  }
+}

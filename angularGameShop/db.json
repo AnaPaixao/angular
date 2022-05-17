@@ -1,0 +1,57 @@
+{
+  "usuario": [
+    {
+      "ativo": true,
+      "nome": "Erick Rangel",
+      "email": "eriel.rj@gmail.com",
+      "tel": "(21) 9971-70603",
+      "pws": "31043314",
+      "id": 1
+    },
+    {
+      "ativo": true,
+      "nome": "Irven Oliveira",
+      "email": "irvensteam2016@gmail.com",
+      "tel": "(21) 92310-42934",
+      "pws": "123123",
+      "id": 2
+    },
+    {
+      "ativo": true,
+      "nome": "Pedro",
+      "email": "pedro@email.com",
+      "tel": "(21) 55555-55555",
+      "pws": "123123",
+      "id": 3
+    },
+    {
+      "ativo": true,
+      "endereco": [],
+      "nome": "Maria",
+      "email": "maria@email.com",
+      "tel": "(21) 55555-55555",
+      "pws": "123123",
+      "id": 4
+    }
+  ],
+  "produto": [
+    {
+      "nome": "Super Mario World",
+      "categoria": "Adventure",
+      "valor": "23,42",
+      "quant": "2",
+      "desenvolvedor": "Nintendo",
+      "descricao": "Jogo do encanador mais famoso do mundo.",
+      "id": 1
+    },
+    {
+      "nome": "Super Megaman",
+      "categoria": "Adventure",
+      "valor": "23,42",
+      "quant": "2",
+      "desenvolvedor": "Capcom",
+      "descricao": "Robô azul bolado matador.",
+      "id": 2
+    }
+  ]
+}

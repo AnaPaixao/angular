@@ -1,0 +1,78 @@
+.header {
+  display: flex;
+  align-items: center;
+
+  background-color: var(--main-black);
+  color: var(--white);
+
+  font-size: 1.8rem;
+}
+
+.header button {
+  margin-right: 1rem;
+
+  border: none;
+}
+
+.header, a {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+}
+
+.sidenav-container {
+  min-height: calc(100vh - 128px); 
+}
+
+mat-divider {
+  margin: 1rem 0;
+  
+  background-color: rgba(196, 196, 196, 0.384);
+}
+
+.sidenav {
+  width: 25rem;
+
+  margin: 1.5rem;
+  padding: 1.6rem;
+
+  border-radius: 10px;
+
+  background-color: var(--main-black);
+  color: var(--white);
+}
+
+.sidenav a {
+  color: var(--white);
+
+  font-size: 1.4rem;
+}
+
+.sidenav a:hover {
+  background-color: rgba(255, 255, 255, 0.205);
+
+  border-radius: 5px;
+}
+
+.sidenav a span {
+  margin-right: 0.8rem;
+}
+
+.sidenav a i {
+  margin-right: 0.8rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  
+  width: 97%;
+  min-height: calc(100vh - 220px);
+
+  margin: 1.5rem 2.5rem;
+  padding-top: 6rem;
+
+  border-radius: 10px;
+}
+

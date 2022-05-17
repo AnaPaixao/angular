@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "contacts-d96c6": {
+      "hosting": {
+        "teste-user-registration": [
+          "contacts-d96c6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "contacts-d96c6"
+  }
+}

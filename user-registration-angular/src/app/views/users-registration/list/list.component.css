@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+}
+
+table {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 3rem;
+
+  width: 75%;
+}
+
+table thead {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 5rem;
+
+  border-radius: 10px 10px 0 0;
+
+  background-color: var(--main-black);
+  color: var(--white);
+}
+
+table thead th {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  font-size: 1.6rem;
+
+  width: 20rem;
+
+  text-transform: uppercase;
+}
+
+table tbody tr {
+  display: flex;
+  justify-content: space-around;
+}
+
+table tbody tr td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20rem;
+  height: 5rem;
+
+  text-align: center;
+
+  padding: 0.5rem 0;
+  
+  border-bottom: 1px solid rgba(58, 58, 58, 0.349);
+} 
+
+button {
+  border: none;
+
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+button.edit:hover {
+  color: green;
+}
+
+button.delete:hover {
+  color: red;
+}
